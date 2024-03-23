@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://zee.com/devil-in-details/captcha/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>CAPTCHA and Quantum Supremacy - Zeeshan Ahmed</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "CAPTCHA and Quantum Supremacy";
+        var mkdocs_page_input_path = "devil-in-details/captcha.md";
+        var mkdocs_page_url = "/devil-in-details/captcha/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Zeeshan Ahmed
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Devil in Details</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Zeeshan Ahmed</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">CAPTCHA and Quantum Supremacy</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="captcha-and-quantum-supremacy">CAPTCHA and Quantum Supremacy</h1>
+<p>I would like to run a very secure and safe city, I want everyone to quarantine for two days before I let them in. How do I manage to do this at all costs, without relying on a centralized authority and ensuring this happens even at the cost of all forms of collusion with the security? The only law then I can rely on are the laws of nature, ones that are impossible to break but easy to verify. I devise a tunnel as the only entrance to my city. These tunnels fit a person, it can fit no vehicles, no contraptions that would allow them to go faster. If the tunnels are long enough to take a healthy person atleast two days to walk, it'll ensure that a person has gone through a quarantine of two days before they could enter my city.</p>
+<p>I hadn't realised, but this is similar to the idea of Proof of Work that is being employed in popular blockchain ledgers, such as Bitcoin ledger. Rather than walking for two days to reach the city, we talk about performing computation to add transactions to the ledger. The computation is devised in a way that brute-force calculation is the only way to do so. The computation is performed by miners that are rewarded for their computation only if they find a solution, else their computation is gone to waste. To add a set of transactions to the ledger, the miner needs to calculate billions of hash values and find one that starts with x number of 0s. The number x is adjusted so that the total computation happening across the world combined to find it takes approximately 10 minutes. This is a simple way to ensure that set of transactions are added every 10 minutes. What happens when computation power increases? We increase x. In analogy, it is similar to increasing the length of the tunnel when the average walking speed has increased.</p>
+<p>Walking back to tunnels, what if I want more from the mechanism? Let's say there is an outbreak of this hypothetical disease that does not allow people to climb too many stairs at once, when an infected person tries to do so they lose their ability to walk for a few days, let's call it "The Climber's Knee." This disease activates within one day and takes longer than two days to fade. It is very absurd and wonky, but bear with me. I want to improve my tunnels to ensure that only a healthy, i.e. a non-infected person is able to make it. If I put a bunch of stairs at the end of tunnel, then I would be certain that this person has been in quarantine for two days, and has not been infected when he reaches the top.</p>
+<p>I have now made my mechanism stronger, not only it ensures that a person goes through quarantine, but also they make out of it only if they are healthy. Climbing stairs is an easy task for the healthy, impossible for the infected. This core mechanism is used to tell apart entities across a lot of different domains. It's a very simple and generic idea but I find it very powerful.</p>
+<h2 id="the-perfect-captcha">The Perfect CAPTCHA</h2>
+<p>CAPTCHA's are different from traditional cryptography, they are more ad-hoc and not based on any particular laws. Their reliability is often due to the closed-sourceness. We define a perfect CAPTCHA by a task which is easy to certify, impossible for bots to solve but a mere chore for humans. The nature of this problem make it impossible to have a tunnel-like mechanism due to a blur-line that splits bots and users.</p>
+<p>We shift to an easier setting of the problem, what if there is a way of climbing the stairs at the end of tunnel by paying someone to carry you but it is quite expensive, and you'd rather just wait out till you are okay. This problem is no longer bounded by physical laws, but of financial ones. We separate the ones that are infected, as well as poor from the rest. Brutal, but this analogy makes sense in the CAPTCHA setting. We distinguish a human from a bot that has limited computing time and power, i.e. finance limitation. This problem is still relevant, because beyond a certain cost, it would be cheaper to hire a human to break it for you with ease rather than create a bot for it. As AI advances, the problems would have to get more creative to avoid the pitfalls of being solved by strong image models that are well capable and do not consume too much compute resource. This field is vast, and we leave the discussion of CAPTCHA at this state to move on to something more tangible.</p>
+<h2 id="achievable-quantum-supremacy">Achievable Quantum Supremacy</h2>
+<p>We have talked about the physical impossibility, and we defined the notion of financial impossibility for given hardware status. When we are talking about CAPTCHA, it is difficult to measure this mathematically, or provide fundamental guarantees. That also explains the closed-source nature of their mechanism. Now we shift our problem to quantum supremacy, which can again be backed by physical laws.</p>
+<p>So far it has been difficult to find a use-case of quantum computing that have an edge over their classical counterparts. It is theoretically established that a quantum computer can do whatever a classical computer can, but we are yet to get a provable problem that a quantum computer can certainly do much faster than what our classical computers can. Finding such a case where the quantum computer is able to compute a solution which our current classical computers did not manage to would be quantum supremacy.</p>
+<p>But what we require is very different, theoretical limits of a classical computers are very far from what we can compute on our computers today. We require a solution that can be certified but not computable on the current state-of-the-art classical computers. This solution would be a computation that would be done on nature, a computation which humans can't artificially create, but one that requires computation impossible by current standards to even reverse-engineer the solution as one could do with factoring.</p>
+<h2 id="financial-way-of-verification">Financial way of verification</h2>
+<p>A non-theoretical way of verifying quantum supremacy would be to reverse the winning direction. Let's say we are talking about a task that is financially profitable, and by minimizing the resources required to perform this task would increase their profit margin. If a company claims that their quantum computer managed to solve this task, and it hasn't been solved by any classical computer we can trust their claim with high confidence. We do so because if the company had solved a task that no one else had classically, then it would be more beneficial for them to claim classical solution as it would be more feasible and profitable than running it on quantum computer. Such verification reduces the margin of advantage a quantum computer would have to show over the current classical computers, but would have to provide utility to the world.</p>
+<h2 id="why-not-factoring-details">Why not factoring? Details</h2>
+<p>Shor's algorithm has an exponential advantage over the current classical algorithms. One could think that this could be sufficient to prove quantum supremacy. Just try factorizing a number no classical computer can currently factor? The issue here is that it is difficult to verify whether the number picked to factor was not artificially chosen to be a product of known primes. If the party giving the number and factoring the number collude, this test would be easy to pass.</p>
+<p>Suppose a company claims quantum supremacy by factoring a number N=pq such that p and q are very large primes. It is not testifiable that the company did not pick these numbers before hand and multiplied them, multiplication is much easier than factoring. If the company claims they did not pick the number, but a separate party gave them, it is still easy to doubt, as there is very little guarantee that the parties did not decide N beforehand. Theoretically and practically, factoring is not the tunnel we are hunting for.</p>
+<p>The hunt for quantum supremacy is the hunt for stairs that current classical computers can't climb anytime soon, but a quantum computer was succcessful at.</p>
+<h3 id="sources">Sources</h3>
+<ul>
+<li>Gotta CAPTCHA ’Em All <a href="https://dl.acm.org/doi/abs/10.1145/3477142">link</a></li>
+<li>Bitcoin Whitepaper <a href="https://www.bitcoin.com/satoshi-archive/whitepaper/">link</a></li>
+<li>Testing GPT on CAPTCHA <a href="https://cheq.ai/blog/testing-ai-gpt-4v-against-captcha/">link</a></li>
+<li>Scott Aaronson on Quantum Supremacy <a href="https://www.scottaaronson.com/papers/quantumsupre.pdf">link</a></li>
+<li>Quantum computation and Shor's factoring algorithm <a href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.68.733">link</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
