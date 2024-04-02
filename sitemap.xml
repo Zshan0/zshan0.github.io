@@ -26,6 +26,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://zee.com/devil-in-details/latex/</loc>
+         <lastmod>2024-04-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zee.com/devil-in-details/pspace/</loc>
+         <lastmod>2024-04-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://zee.com/devil-in-details/zeroth/</loc>
          <lastmod>2024-04-02</lastmod>
          <changefreq>daily</changefreq>

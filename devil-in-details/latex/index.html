@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://zee.com/devil-in-details/zeroth/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://zee.com/devil-in-details/latex/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Zeroth Law of Thermodynamics - Zeeshan Ahmed</title>
+    <title>LaTeX on mkdocs - Zeeshan Ahmed</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Zeroth Law of Thermodynamics";
-        var mkdocs_page_input_path = "devil-in-details/zeroth.md";
-        var mkdocs_page_url = "/devil-in-details/zeroth/";
+        var mkdocs_page_name = "LaTeX on mkdocs";
+        var mkdocs_page_input_path = "devil-in-details/latex.md";
+        var mkdocs_page_url = "/devil-in-details/latex/";
       </script>
     
     <!--[if lt IE 9]>
@@ -65,7 +65,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Zeroth Law of Thermodynamics</li>
+      <li class="breadcrumb-item active">LaTeX on mkdocs</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -74,12 +74,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="zeroth-law-of-thermodynamics">Zeroth Law of Thermodynamics</h1>
-<blockquote>
-<p>If two thermodynamic systems are both in thermal equilibrium with a third system, then the two systems are in thermal equilibrium with each other.</p>
-</blockquote>
-<p>The name had always intrigued me. The third law of thermodynamics was established in 1912. Decades later, Ralph Fowler established a law that was considered to be more fundamental than all the previous ones. The law can not be stated more simply, but it's inference leads to the description of <em>Temperature</em>. Consider a mercury thermometer, it in itself is a system that has defined properties. A thermometer is able to reach thermal equilibrium with the system whose temperature is to be measured <em>without</em> influencing the properties of the system itself. If this thermometer is able to reach thermal equilibrium with two separate systems, then by the zeroth law, the two systems are also in equilibrium with each other. Being in thermal equilibrium with each other, these systems have the same thermal temperature.  </p>
-<p>I find this equivalence very cool, it establishes a metric based on just the relation of equivalence and nothing more. If we establish a direction of non-equilibrium, based on the direction of flow of heat, we define <strong>hot</strong> and <strong>cold</strong>. This addition of direction creates a heirarchy of temperature, based on the relation.</p>
+                <h1 id="latex-on-mkdocs">LaTeX on mkdocs</h1>
+<p>This is a brief instruction if you want to write LaTeX in your blog and if you
+use mkdocs to write them.</p>
+<p>Run the following command to install <code>pymdown-extensions</code>:</p>
+<pre><code class="language-sh">pip install pymdown-extensions
+</code></pre>
+<p>Once it is successfully installed, you need to add it to your config file, <code>mkdocs.yaml</code>.</p>
+<pre><code class="language-yaml">markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+</code></pre>
+<p>Close your server currently running and run it again. You should now be able to render LaTeX on your blog.</p>
+<p>Inline would be <code>$\pi &lt;3$</code>: <span class="arithmatex">\(\pi &lt;3\)</span> and large equations:</p>
+<pre><code class="language-tex">$$
+|\psi(t)\rangle = e^{-itH}|\psi_0\rangle
+$$
+</code></pre>
+<div class="arithmatex">\[
+|\psi(t)\rangle = e^{-itH}|\psi_0\rangle
+\]</div>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/">arithmatex</a></li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/reference/math/">material</a></li>
+</ul>
               
             </div>
           </div><footer>
