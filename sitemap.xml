@@ -2,42 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://zee.com/</loc>
-         <lastmod>2024-04-02</lastmod>
+         <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zee.com/about/</loc>
-         <lastmod>2024-04-02</lastmod>
+         <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zee.com/devil-in-details/</loc>
-         <lastmod>2024-04-02</lastmod>
+         <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zee.com/devil-in-details/captcha/</loc>
-         <lastmod>2024-04-02</lastmod>
+         <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zee.com/devil-in-details/cicero/</loc>
-         <lastmod>2024-04-02</lastmod>
+         <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zee.com/devil-in-details/latex/</loc>
-         <lastmod>2024-04-02</lastmod>
+         <lastmod>2024-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://zee.com/devil-in-details/pnpap/</loc>
+         <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zee.com/devil-in-details/pspace/</loc>
-         <lastmod>2024-04-02</lastmod>
+         <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://zee.com/devil-in-details/zeroth/</loc>
-         <lastmod>2024-04-02</lastmod>
+         <lastmod>2024-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

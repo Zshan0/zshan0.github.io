@@ -75,8 +75,83 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="intuition-on-pspace-class">Intuition on PSPACE class</h1>
-<p>Languages decidable in finite time by a Turing Machine with polynomial space 
-all belong to the <span class="arithmatex">\(\text{PSPACE}\)</span> class. </p>
+<p>Languages decidable in finite time by a Deterministic Turing Machine with polynomial space 
+all belong to the <span class="arithmatex">\(\text{PSPACE}\)</span> class. In this blog, we will describe 
+the polynomial heirarchy in terms of Oracle access and show how it is equal 
+to the PSPACE class. Rather than a textbook approach I would like to talk about 
+it more intuitively and less formally.</p>
+<p>You can represent the size of the configuration of the TM in <span class="arithmatex">\(\mathcal{O}(S(n))\)</span>
+bits. If there is a path from the starting configuration to the accept 
+configuration then the machine halts at accept.</p>
+<div class="arithmatex">\[
+    C_{acc} - C_{start} \iff x \in L
+\]</div>
+<h2 id="grasping-pspace">Grasping PSPACE</h2>
+<p>There is not much to understand about the complexity class PSPACE on it's, unless 
+it is compared to other classes. For example, PSPACE is certainly bigger than 
+the class NP, because it can re-use the space to check all the non-deterministic 
+paths of polynomial time. The same statement can be made about the relation 
+between co-NP and PSPACE.</p>
+<h2 id="creating-a-ladder-npnpnpdots">Creating a Ladder <span class="arithmatex">\(NP^{{NP^{NP}}^{\dots}}\)</span></h2>
+<p>It is simple enough to compare NP, co-NP. One can go a few more steps ahead to 
+make a ladder of NP oracles. <span class="arithmatex">\(NP^{NP}\)</span> is a machine that can definitely solve 
+problems from both NP and co-NP. The machine <span class="arithmatex">\(NP^{NP}\)</span> has two-layer 
+non-determinism. It can query for a non-deterministic solution, as well as use
+that solution in all of it's non-deterministic paths. Trivially it can solve 
+NP problems by not choosing to use the oracle at all. Moreover it can solve
+co-NP as it can query the oracle for the solution, and flip the answer when 
+necessary.</p>
+<p>Comparing the power of <span class="arithmatex">\(NP^{NP}\)</span> to PSPACE, it is not difficult to see that
+PSPACE can simulate both the oracle as well as the non-deterministic machine 
+in polynomial space each. Giving us <span class="arithmatex">\(NP^{NP} \subset PSPACE\)</span>. Regardless of 
+how many ever polynomial-many oracles you stack up, they will remain within 
+the simulation capability of the PSPACE class.</p>
+<h2 id="polynomial-heirarchy">Polynomial Heirarchy</h2>
+<p>In the above section we described the ladder of NP oracles, this ladder is 
+infact equivalent to another well-known set of classes called as the polynomial 
+heirarchy. Polynomial heirarchy contains <span class="arithmatex">\(\sum_k^p\)</span> and <span class="arithmatex">\(\prod_k^p\)</span>. They defer 
+by whether their base machine is an NP machine, or a co-NP machine. To 
+represent the polynomial heirarchy in terms of a deterministic Turing Machine, 
+we use the witness notation of NP and co-NP.</p>
+<div class="arithmatex">\[
+    L \in \text{NP} \iff \bigg( x \in L \iff \exists v M(x, v) = 1 \bigg)
+\]</div>
+<p>Similarly, we define co-NP.</p>
+<div class="arithmatex">\[
+    L \in \text{co-NP} \iff \bigg( x \in L \iff \forall v M(x, v) = 1 \bigg)
+\]</div>
+<h3 id="alternating-quantifiers">Alternating Quantifiers</h3>
+<p>To build one layer on top of NP, we can not just have two different existential 
+quantifiers. Because these two sequential existential quantifiers can be 
+absorbed into one <span class="arithmatex">\(\exists v_1, \exists v_2 = \exists v_3\)</span> where 
+<span class="arithmatex">\(v_3 = v_1\cdot v_2\)</span>. Instead we need to <em>alternate</em> the quantifier from <span class="arithmatex">\(\exists\)</span> 
+to <span class="arithmatex">\(\forall\)</span>. We define <span class="arithmatex">\(\sum_2^p\)</span> as follows:</p>
+<div class="arithmatex">\[
+     x \in L \iff \exists v_1 \forall v_2 M(x, v_1, v_2) = 1
+\]</div>
+<p>We show that <span class="arithmatex">\(NP^{NP} = \sum_2^p\)</span>. First we show 
+<span class="arithmatex">\(NP^{NP} \subset \sum_2^p\)</span>. The first existential quantifier takes care of the 
+non-deterministic nature of NP machine. We then use the <span class="arithmatex">\(\forall\)</span> quantifier 
+wherever the machine invokes the NP oracle. We flip the output incase the result
+deems to, accessing non-determinism in an oracular fashion allows the output flipping.</p>
+<p><strong>Exercise:</strong> Show that <span class="arithmatex">\(\sum_2^p \subset NP^{NP}\)</span></p>
+<p>Once you solve the exercise, the equality is established.</p>
+<hr />
+<p>We define Truly Quantified Boolean Formula (<strong>TQBF</strong>) as the class union of 
+any number of alternating quantifiers applied on a polynomial deterministic 
+Turing Machine.</p>
+<div class="arithmatex">\[
+    \text{TQBF} = \cup_{k=1} \sum_k^p
+\]</div>
+<h2 id="tqbf-is-pspace-complete">TQBF is PSPACE-complete</h2>
+<p>The above section showed that the polynomial heirarchy can be represented by 
+layering of NP oracles. This heirarchy itself lies withing PSPACE. You can 
+convert this entire heirarchy to a single problem, which is TQBF. What we would 
+like to show next is the equivalence between PSPACE and polynomial heirarchy.</p>
+<p>We refer back to the configuration space size as well as the condition for 
+a string belonging to the language described earlier. Now we set a bound on the 
+path length. Without loss of generality, we can claim that there are $2^{\mathcal{O}(S(n))} 
+nodes in the configuration space. The longest chain from <span class="arithmatex">\(C_{start}\)</span> to <span class="arithmatex">\(C_{accept}\)</span>. </p>
               
             </div>
           </div><footer>
