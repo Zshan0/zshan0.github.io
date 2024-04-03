@@ -90,6 +90,25 @@ the locality of computation to produce the NP-completeness of SAT. Referring to
 Arora Barak's textbook on Complexity Theory, they guess that to make these 
 subset equalities stricter, there is a need to use a new property of computation 
 and/or the Turing Machine.</p>
+<h2 id="another-resource">Another Resource</h2>
+<p>Apart from space and time, you can treat non-determinism and alternation as 
+resources as well. The greater non-determinism comes from a larger witness, 
+greater alternation comes from the number of times the ATM is allowed to 
+alternate. The polynomial heirarchy forms a heirarchy based on the number of 
+alternations that are allowed. At the end, these alternations serve no 
+additional benefit if the total time allocated is locked to polynomial. Any 
+amount of alternation with polynomial time resource is equivalent of 
+having polynomial space with no alternation at all.</p>
+<p>Alternation itself allowed with polynomial space is equivalent of having 
+exponential time (<span class="arithmatex">\(\text{APSPACE} = \text{EXPTIME}\)</span>). The time and space 
+heirarchy theorems talk about time and space as resource, and how having more 
+of it provides us with power to decide more languages. Polynomial heirarchy 
+does something similar, but under constrained time.</p>
+<h3 id="references">References</h3>
+<ul>
+<li>Computational Complexity: A Modern Approach by Sanjeev Arora and Boaz Barak</li>
+<li>Lecture 17 of Complexity Theory: Markus Krötzsch</li>
+</ul>
               
             </div>
           </div><footer>
